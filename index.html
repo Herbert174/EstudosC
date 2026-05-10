@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Titulo teste</title>
+	</head>
+	<body style="background-color: #000">
+		Teste
+
+		-------
+
+		Abaixo você pode iniciar seu atendimento online
+
+		<a href="chat.html">Chat aqui</a>
+	</body>
+</html>
+
+<!-- 
+				Comandos git
+				
+------------------------ Repositorio Local -------------------------------
+git init // Cria nosso repositório (linha do tempo)
+git add  // Adiciona ou atualiza mudanças para irem a linha do tempo
+git add . // Adiciona todas as atualizações para irem a linha do tempo
+git commit -m 'Comentário'// Adiciona um ponto na linha do tempo
+git log // Visualiza o histórico da nossa linha do tempo
+git status // Histórico das alterações 
+git show // Pontos da história 
+git branch // Mostra branchs existentes e a ativa no momento
+git checkout [BRANCH] // Alterna para branch selecionada 
+git branch [NOME] // Cria uma nova branch 
+git branch -D [NOME] Deleta o branch selecionado 
+git merge [branch] // Une a branch que você está atualmente com a apontada
+git checkout <commit ID> <file> // Volta o repositorio para o commit do ID selecionado
+---------------------- Repositorio na Nuvem ------------------------------
+git clone [Link do repositorio] // Link do GitHub etc, onde está armazenado
+o repositorio que você quer trazer para a sua maquina
+git fetch sincroniza o status do repositorio local com o repositorio na nuvem
+git pull // pega a versão do repositorio na nuvem e trás para o repositorio local
+git push // joga para o repositorio na nuvem a versão do seu repositorio local
+git branch -M main // branch reconhecida pelo github, necessário para poder executar o push
+//Você não utiliza a master para levar ao github apenas da main para origin!
+git remote add origin [Link do repositorio] // Adiciona branch origin, branch linkada a nuvem
+git remote -v // Verifica link ligada a origin
+git push -u origin main // Leva seus arquivos do repositorio local para seu repositorio na nuvem
+git remote remove origin // Apaga origin
+git remote set-url origin git: [Link do repositorio] // Altera link do repositorio da nuvem em origin
+git revert <commit ID> // Volta o repositorio para o commit do ID selecionando, mantendo o historico de 
+alterações, ideais para repositorios compartilhados
+
+git log --author=usuario // Exibir histórico de um determinado autor 
+
+após usar git log pressiona a tecla Q para sair do log
+
+Para trazer a sua branch para a master ou unir uma branch a outra utilize o merge
+
+------------------------------------------------------------------------
+
+               				  Logica git
+------------------------------------------------------------------------
+
+         Branch|(Adicionar comentário)
+Master -----------------------(Linha do tempo principal/Codigo rodando)
+                     Branch|(Adicionar carrinho de compras)
+
+------------------------------------------------------------------------
+O master é a linha operacional do código a que está rodando.
+Os branchs são alterações que estão sendo feitas mas que não
+estão ainda diretamente na linha do tempo principal (master)
+ou seja através de branchs é possivel alterar com uma especie
+de cópia dele, sem com isso alterar o codigo principal até que 
+o commit seja feito.
+
+-->
+
