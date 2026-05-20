@@ -8,12 +8,14 @@ int main()
     printf("* Bem vindo ao nosso jogo de adivinhação 2.0 *\n");
     printf("**********************************************\n");
 
-    int numerosecreto = 44;
+    int numerosecreto = 42;
     /*int idade;
     idade = 26;*/
     int palpite;
     int ganhou = 0;
     int tentativas = 1;
+    double pontos = 1000;
+    double pontosperdidos = 0;
 
     //for(int i = 1; i <= NUMERO_TENTATIVAS; i++)
     while(ganhou == 0)
@@ -50,15 +52,21 @@ int main()
                 if(maior)
                     {
                     printf("O seu palpite e maior que o numero secreto\n\n");
-                    }
+                    pontosperdidos = (palpite - numerosecreto) / 2.0;  
+                    } //o compilador inicia da direita para a esquerda logo se tivessemos apenas deixa 2 a 
+                      // equação poderia ser entendida como com um resultado guardado em uma variavel do tipo int
                 else if(menor)
                     {
                     printf("O seu palpite e menor que o numero secreto\n\n");
+                    pontosperdidos = (numerosecreto - palpite) / 2.0;
                     }
                 }
+        //pontosperdidos = (palpite - numerosecreto) / 2;
+        pontos = pontos - pontosperdidos;
         }
 
 
     printf("Fim de jogo \n");
-    printf("Voce acertou em %d tentativas!", tentativas);
-}
+    printf("Voce acertou em %d tentativas!\n", tentativas);
+    printf("Total de pontos : %.1f\n", pontos); //%d não suporta variaveis double, para eles usar %f
+}             //utilizar o .1f para para o compilar o tanto de casas depois da virgula queremos imprimir
