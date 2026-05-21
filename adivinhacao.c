@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 //#define NUMERO_TENTATIVAS 5
 
@@ -8,7 +10,12 @@ int main()
     printf("* Bem vindo ao nosso jogo de adivinhação 2.0 *\n");
     printf("**********************************************\n");
 
-    int numerosecreto = 42;
+    int segundos = time(0);
+    srand(segundos);
+
+    int numerogrande = rand();
+
+    int numerosecreto = numerogrande % 100;    //% para pegar o resto da divisão 10/3 = 3,3333 (resto 3333)
     /*int idade;
     idade = 26;*/
     int palpite;

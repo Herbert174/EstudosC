@@ -4,10 +4,14 @@ int main()
 {
     int contador = 1;
     int resultado = 0;
-    while(contador <=100)
+    int numerotabuada;
+
+    printf("Escolha um numero para a tabuada \n");
+    scanf("%d", &numerotabuada);
+    while(contador <=10)
         {
-        resultado = resultado + contador; 
-        printf("Resultado da soma %d\n", resultado);
+        resultado = numerotabuada * contador; 
+        printf("%d * %d = %d\n", numerotabuada, contador, resultado);
         contador++;
         }
 
